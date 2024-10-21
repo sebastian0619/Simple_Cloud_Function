@@ -1,0 +1,33 @@
+def example(data):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return f"Hello, {data}!"

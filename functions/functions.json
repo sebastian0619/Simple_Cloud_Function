@@ -1,0 +1,27 @@
+{
+    "example": {
+        "route": "example",
+        "function_name": "example",
+        "description": "Dynamically loaded function"
+    },
+    "gathering_message": {
+        "route": "gathering_message",
+        "function_name": "gathering_message",
+        "description": "Dynamically loaded function"
+    },
+    "qqbot": {
+        "route": "qqbot",
+        "function_name": "qqbot",
+        "description": "Dynamically loaded function"
+    },
+    "search": {
+        "route": "search",
+        "function_name": "search",
+        "description": "Dynamically loaded function"
+    },
+    "test": {
+        "route": "test",
+        "function_name": "test",
+        "description": "Dynamically loaded function"
+    }
+}

@@ -1,0 +1,10 @@
+services:
+  cloud_function:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+  #    - EXTRA_REQUIREMENTS="your_extra_package1 your_extra_package2"  # 在这里添加额外的依赖

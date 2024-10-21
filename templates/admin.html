@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Function Admin</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Function Management</h1>
+        <a href="{{ url_for('logout') }}" class="btn btn-secondary mb-4">Logout</a>
+        
+        <h2>Add New Function</h2>
+        <form method="post" action="{{ url_for('create_function') }}" class="mb-4">
+            <div class="form-group">
+                <label for="route_name">Route Name</label>
+                <input type="text" class="form-control" id="route_name" name="route_name" required>
+            </div>
+            <div class="form-group">
+                <label for="function_code">Function Code</label>
+                <textarea class="form-control" id="function_code" name="function_code" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Function</button>
+        </form>
+        
+        <h2>Existing Functions</h2>
+        {% if functions %}
+            <ul class="list-group">
+                {% for route, details in functions.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ route }}</strong>: {{ details['description'] }}
+                        <a href="{{ url_for('edit_function', route=route) }}" class="btn btn-warning btn-sm float-right">Edit</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No functions available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
