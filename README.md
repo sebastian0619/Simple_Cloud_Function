@@ -41,13 +41,7 @@
    pip install -r requirements.txt
    ```
 
-3. 初始化数据库：
-
-   ```bash
-   python app.py
-   ```
-
-4. 启动应用：
+3. 启动应用：
 
    ```bash
    python app.py
@@ -59,9 +53,25 @@
    docker-compose up --build
    ```
 
+## Docker 部署说明
+
+1. 确保已安装 Docker 和 Docker Compose。
+2. 在项目根目录下，使用以下命令构建 Docker 镜像：
+
+   ```bash
+   docker-compose build
+   ```
+
+3. 启动 Docker 容器：
+
+   ```bash
+   docker-compose up
+   ```
+
+4. 访问 `http://localhost:8888/login` 进行登录。
+
 ## 使用说明
 
-- 访问 `http://localhost:8888/login` 进行登录。
 - 登录后可以访问管理页面，进行函数的创建、编辑和删除。
 - 支持通过 API 密钥进行身份验证。
 
